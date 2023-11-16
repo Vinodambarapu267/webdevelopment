@@ -1,0 +1,142 @@
+
+body{
+    margin: 0;
+    background-image:url(https://res-console.cloudinary.com/dchmyyur7/thumbnails/v1/image/upload/v1697642012/SU1HXzIwMjMwNTE5XzEwMDYzNl8yNDRfY3B3NW1q/grid_landscape);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position:center ;
+    color: white;
+}
+.logo{
+    height: 70px;
+}
+.navbar{
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    color: rgb(218, 230, 59);
+    background-color: rgb(103, 103, 234);
+}
+.navbar-left{
+    padding: 10px;
+}
+.nav-h1{
+    text-align: center;
+    font-size: 50px;
+    color:rgb(39, 207, 39);
+    border: 2PX white solid;
+    display: block;
+    padding: 10px;
+    background-color:rgb(84, 226, 84);   
+    animation-name:vinod;
+    animation-duration: 4s;
+    animation-direction:reverse;
+    animation-iteration-count: infinite;
+}
+@keyframes vinod{
+    form{background-color: green;}
+    to{background-color: transparent;}
+    0%{color: orangered;}
+    50%{color:white;}
+    100%{color: aqua;}
+    75%{image: url(https://res-console.cloudinary.com/dchmyyur7/thumbnails/v1/image/upload/v1697642012/SU1HXzIwMjMwNTE5XzEwMDYzNl8yNDRfY3B3NW1q/grid_landscape);}
+}
+.home-animation{
+    border: 2px white solid;
+    font: italic bold;
+    width: 70px;
+    color: black;
+    position: relative;
+    animation: mymove 5s infinite;
+
+}
+.navbar-right{
+    list-style-type: auto;;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    padding-right: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.a{
+    padding: 10px;
+    margin: 5px;
+    border: solid 2px rgba(123, 14, 14, 0.808);
+}
+.home{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content:space-between;
+    height: 90vh;
+    color: brown;
+}
+.h-l{
+    font-family: 'encode Sans', sans-serif;
+    width: 50vw;
+    padding-left: 100px;
+    text-align: left;
+    color:brown;
+}.h-r{
+    width: 50vw;
+    padding-left:  100px;
+  
+}
+.services{
+    text-align: center;
+    padding: 20px;
+    margin: 8px;
+    color:black;
+    margin: 10px;
+    padding: 10px;
+}
+.s-h1{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(89, 5, 167);
+    letter-spacing: 3px;
+    font-size: 60px;
+    font-style: bold;
+    border: 2px solid rgb(223, 34, 34);
+    display: inline;
+    border-radius: 50px;
+    padding: 10px;
+    margin: 10px;
+}
+.ser-sub-con{
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    padding: 20px;
+}
+.ser-card{
+    border: 3px solid rgb(15, 232, 232);
+    margin: 5px;
+    padding: 15px;
+    width: 33%;
+    border-radius: 20%;
+}
+.contact{
+    text-align: center;
+}
+.contact-detail{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 30px;
+}
+.img-icon{
+    height: 50px;
+}
+.online-contact{
+    padding: 40px;
+}
+.ser-logo{
+    height:60px;
+}
+.ser-h1{
+    color: rgb(42, 231, 42);
+}
+.ser-bottom{
+    font-size: 10px;
+    text-align: center;
+}
