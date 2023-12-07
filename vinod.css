@@ -9,7 +9,11 @@
     background-position:center;
     color: white;
 }
-
+marquee{
+    color: black;
+    font-size: 20px;
+    font-style: bold;
+}
 .item-nav{
     color: rgb(107, 51, 227);
     border: 2px solid black ;
