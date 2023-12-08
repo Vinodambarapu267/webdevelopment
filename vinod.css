@@ -16,7 +16,7 @@ marquee{
 }
 .item-nav{
     color: rgb(107, 51, 227);
-    border: 2px solid black ;
+    border: 2px solid rgb(4, 26, 173) ;
     border-radius: 10px;
     margin: 2px;
 }
