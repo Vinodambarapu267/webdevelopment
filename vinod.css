@@ -139,7 +139,6 @@ img{
     height: 50px;
 }
 .s-h1:hover{
-    background-color: aqua;
     border: 5px solid rgb(60, 195, 60);
     font-size: 50px;
 }
