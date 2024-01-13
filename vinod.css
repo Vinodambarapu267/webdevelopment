@@ -7,7 +7,7 @@
     background-repeat: no-repeat;
     background-size:cover;
     background-position:center;
-    color: white;
+    color:black;
 }
 marquee{
     color: black;
@@ -27,6 +27,8 @@ marquee{
 }
 .nav-h1{
 text-align:center;
+box-sizing:border-box;
+box-shadow:0 0 10px #d70e65;
 font-size: 50px;
 color:rgb(39, 207, 39);
 animation-name:vinod;
@@ -44,10 +46,18 @@ box-shadow{color: coral;}
 .item-nav:hover{
     color: red;
 }
+.img-b{
+    cursor: pointer;
+    background: linear-gradient(180deg,
+    orange
+    rgb(249,70,100)
+    rgb(244,43,244)
+    );
+    transition: all 0.3s;
+}
 .img-b:hover{
-    border: 5px solid rgb(35, 163, 35);
     border-radius: 50%;
-    box-shadow: inset;
+    box-shadow:0 0 50px #d70e65;
 }
 .navbar-nav{
     margin-left:auto;
@@ -64,6 +74,10 @@ box-shadow{color: coral;}
    padding: 30px;
    font-size: large;
    font-family: "DM sans", sans-serif;
+}
+.about{
+    background-color: rgba(255, 255, 255, 0.386);
+    backdrop-filter: blur(10px);
 }
 .about-h{
     text-align: center;
@@ -87,6 +101,7 @@ img{
     border: 2px solid black;
     padding: 20px;
     color: white;
+    transition-duration: 0.3s;
     size: 100px;
 }
 .card-p{
@@ -95,10 +110,11 @@ img{
     padding: 20px;
 }
 .card:hover{
-    border: 5px solid rgb(43, 43, 217);
     background-repeat: no-repeat;
     background-size:cover;
     background-position:center;
+    transform:scale(1.1,1.1);
+    box-shadow:0 0 30px #d70e65;
     background-image: url(https://tse3.mm.bing.net/th?id=OIP.jqQhWOVs8JSsQgxZ2E-6oQHaEK&pid=Api&P=0&h=180);
 }
 .card-h1{
@@ -137,6 +153,7 @@ img{
     color:rgb(221, 85, 35);
     width: 50px;
     height: 50px;
+    box-shadow:0 0 10px #d70e65;
 }
 .s-h1:hover{
     border: 5px solid rgb(60, 195, 60);
