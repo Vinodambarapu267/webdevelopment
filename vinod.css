@@ -3,32 +3,95 @@
     padding-left:2PX;
 }
 .body{
-    background-image:url(https://res-console.cloudinary.com/dchmyyur7/thumbnails/v1/image/upload/v1696770257/c2FtcGxlcy9sb29rLXVw/grid_landscape);
+    background-image:url(https://csshint.com/wp-content/uploads/2020/01/CSS-Animated-Backgrounds-2.gif);
     background-repeat: no-repeat;
     background-size:cover;
     background-position:center;
     color:white;
+    height: 100%;
+    width: 100%;
 }
 marquee{
     color: black;
     font-size: 20px;
     font-style: bold;
 }
-.item-nav{
-    color: rgb(107, 51, 227);
-    border: 2px solid rgb(4, 26, 173) ;
-    border-radius: 10px;
-    margin: 2px;
+ul li{
+    list-style: none;
+}
+ul li a{
+    position: relative;
+    display: block;
+    text-transform: uppercase;
+    margin: 20px 2px ;
+    padding: 10px 20px;
+    color: white;
+    font-family: sans-serif;
+    text-decoration: none;
+    font-size: 10px;
+    font-weight: 600;
+    transition: 0.5s;
+    z-index: 1;
+}
+ul li a::before{
+    content: "";
+    position:absolute;
+    top: 0;left: 0;
+    width: 100%;height: 100%;
+    border-top: 2px solid #fde907;
+    border-bottom: 2px solid #fde907;
+    transform: scaleY(2);
+    border: 2px solid #fde907;
+    opacity: 0;transition: 0.3s;
+}
+ul li a:after{
+    content: "";
+    position: absolute;
+    top:2px; left: 0;
+    width: 100%;height: 100%;
+    transition: 0.3s;
+    z-index: -1;
+    border: 2px solid #fde907;
+}
+ul li a:hover{
+    color: rgb(234, 231, 231);
+}
+ul li a:hover::before{
+    transform: scaleY(1);
+    opacity: 1;
+}
+ul li a:hover::after{
+    transform: scaleY(1);
+    opacity: 1;
+}
+.navbar-right{
+    list-style-type: auto;;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    padding-right: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.navbar{
+    margin: 10px;
+    padding: 10px;
 }
 .navbar{
     border: 4px solid rgb(54, 234, 54);
     margin: 10px;
     padding: 10px;
 }
+.navbar-nav{
+    margin-left:auto;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+}
 .nav-h1{
 text-align:center;
 box-sizing:border-box;
-box-shadow:0 0 10px #d70e65;
+box-shadow:0 0 12px #2cb10e;
 font-size: 50px;
 color:rgb(39, 207, 39);
 animation-name:vinod;
@@ -36,33 +99,52 @@ animation-duration: 4s;
 animation-iteration-count: infinite;
 }
 @keyframes vinod{
-box-shadow{color: coral;}
 0%{color: orangered;}
 25%{color: rgb(87, 87, 208);}
 50%{color:white;}
 100%{color: aqua;}
 75%{image: url(https://res-console.cloudinary.com/dchmyyur7/thumbnails/v1/image/upload/v1697642012/SU1HXzIwMjMwNTE5XzEwMDYzNl8yNDRfY3B3NW1q/grid_landscape);}
 }
-.item-nav:hover{
-    color: red;
+.logo{
+    width: 10%;
+    margin-left: 20px;
 }
 .img-b{
-    cursor: pointer;
-    background: linear-gradient(180deg,
-    orange
-    rgb(249,70,100)
-    rgb(244,43,244)
-    );
+    width: 350px;
     transition: all 0.3s;
+    margin-left: 200px;
+    position: relative;
+    border-radius: 50%;
 }
 .img-b:hover{
+    margin-top: 50px;
+    cursor:pointer;
     border-radius: 50%;
-    box-shadow:0 0 50px #d70e65;
+    box-shadow:6px 5px 100px;
+    animation-name:profile;
+animation-duration: 4s;
+animation-iteration-count: infinite;
 }
-.navbar-nav{
-    margin-left:auto;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 20px;
+@keyframes profile{
+box-shadow{color: rgb(200, 188, 184);}
+0%{color: rgb(197, 67, 20);}
+25%{color: rgb(209, 12, 235);}
+50%{color:rgb(184, 18, 18);}
+100%{color: rgb(73, 4, 212);}
+}
+p:hover{
+    animation-name:profile;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    }
+h1:hover{
+    text-decoration: underline;
+    text-decoration-color: #42c425;
+    text-decoration: underline blur(20px);
+}
+span:hover{
+    text-decoration: underline;
+    text-decoration-color: #d30c0c;
 }
 .body-section{
     height: 80vh;
@@ -72,13 +154,11 @@ box-shadow{color: coral;}
 .box-left{
    text-align: center;
    padding: 30px;
+   width: 50vw;
    font-size: large;
    font-family: "DM sans", sans-serif;
 }
-.about{
-    background-color: rgba(255, 255, 255, 0.386);
-    backdrop-filter: blur(10px);
-}
+.bocz
 .about-h{
     text-align: center;
     font-family: "DM sans", sans-serif;
@@ -153,7 +233,7 @@ img{
     color:rgb(221, 85, 35);
     width: 50px;
     height: 50px;
-    box-shadow:0 0 10px #d70e65;
+    box-shadow:0 0 10px #1cbe35;
 }
 .s-h1:hover{
     border: 5px solid rgb(60, 195, 60);
