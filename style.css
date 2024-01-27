@@ -1,11 +1,14 @@
 
 body{
     margin: 0;
-    background-image:url(https://res-console.cloudinary.com/dchmyyur7/thumbnails/v1/image/upload/v1697642012/SU1HXzIwMjMwNTE5XzEwMDYzNl8yNDRfY3B3NW1q/grid_landscape);
+    background-image:url(https://res.cloudinary.com/dchmyyur7/image/upload/v1697642012/IMG_20230519_100636_244_cpw5mj.jpg);
     background-repeat: no-repeat;
     background-size:cover;
     background-position:center ;
     color: white;
+}
+marquee{
+    color: black;
 }
 .logo{
     height: 70px;
@@ -139,4 +142,5 @@ body{
 .ser-bottom{
     font-size: 10px;
     text-align: center;
+    color: black;
 }
