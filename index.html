@@ -1,0 +1,572 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>vinod portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+    <script>localStorage.getItem("pref-theme") === "dark" && document.body.classList.add("dark")</script>
+    <style>
+        .nav-logo {
+            height: 150px;
+            filter: drop-shadow(4px 1px 1px red);
+        }
+
+        .body {
+            background-image: url(https://res.cloudinary.com/dchmyyur7/image/upload/v1697642012/IMG_20230519_100636_244_cpw5mj.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            color: white;
+            background-color: black;
+        }
+
+        h1 {
+            position: relative;
+        }
+
+        h1::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            left: 0;
+            bottom: 0;
+            height: 4px;
+            background-color: aqua;
+            transform: scaleX(0);
+            transition: 0.5s;
+        }
+
+        h1:hover::after {
+            transform: scaleX(1);
+        }
+
+        marquee {
+            color: black;
+            font-size: 20px;
+            font-style: bold;
+        }
+
+        ul {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            padding-left: 20px;
+        }
+
+        ul li {
+            list-style: none;
+        }
+
+        ul li a {
+            position: relative;
+            display: block;
+            text-transform: uppercase;
+            margin: 20px 0;
+            padding: 10px 20px;
+            color: rgb(158, 212, 20);
+            font-family: sans-serif;
+            text-decoration: none;
+            font-size: 10px;
+            font-weight: 600;
+            transition: 0.5s;
+            z-index: 1;
+        }
+
+        nav ul li a::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-top: 2px solid #fde907;
+            border-bottom: 2px solid #fde907;
+            transform: scaleY(2);
+            opacity: 0;
+            transition: 0.3s;
+        }
+
+        ul li a:after {
+            content: "";
+            position: absolute;
+            top: 2px;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #fde907;
+            transition: 0.3s;
+            z-index: -1;
+        }
+
+        ul li a:hover {
+            color: black;
+        }
+
+        ul li a:hover::before {
+            transform: scaleY(1);
+            opacity: 1;
+        }
+
+        ul li a:hover::after {
+            transform: scaleY(1);
+            opacity: 1;
+        }
+
+        .navbar-right {
+            list-style-type: auto;
+            ;
+            margin: 0;
+            padding-left: 50%;
+            padding-right: 20px;
+        }
+
+        .dark-mode {
+            background-color: #000000;
+            color: #ffffff;
+        }
+
+        .navbar {
+            border: 4px solid rgb(54, 234, 54);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            max-width: calc(var(--nav-width) + var(--gap) * 2);
+            margin-inline-start: auto;
+            margin-inline-end: auto;
+            line-height: var(--header-height);
+        }
+
+        .nav-h1 {
+            box-sizing: border-box;
+            border-radius: 0 50px;
+            box-shadow: 0 0 10px #d70e65, 0 0 10px #d70e65, 0 0 10px #d70e65;
+            font-size: 50px;
+            color: rgb(39, 207, 39);
+            animation-name: vinod;
+            animation-duration: 4s;
+            padding: 0;
+            margin: 0;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes vinod {
+            box-shadow {
+                color: coral;
+            }
+
+            0% {
+                color: rgb(210, 68, 16);
+            }
+
+            25% {
+                color: rgb(87, 87, 208);
+            }
+
+            50% {
+                color: rgb(104, 6, 119);
+            }
+
+            100% {
+                color: aqua;
+            }
+
+            75% {
+                image: url(https://res-console.cloudinary.com/dchmyyur7/thumbnails/v1/image/upload/v1697642012/SU1HXzIwMjMwNTE5XzEwMDYzNl8yNDRfY3B3NW1q/grid_landscape);
+            }
+        }
+
+        .img-b {
+            width: 300px;
+            cursor: pointer;
+            transition: all 0.3s;
+            border-radius: 100%;
+            transform: scale(0.5);
+        }
+
+        svg {
+            width: 30px;
+            height: 50px;
+        }
+
+        .img-b:hover {
+            border-radius: 100%;
+            box-shadow: 0 0 50px, 0 0 50px, 0 0 50px, 0 0 50px, 0 0 50px;
+            margin-top: 30px;
+            animation-name: image;
+            animation-duration: 2s;
+            transform: scale(1) rotate(360deg);
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes image {
+            0% {
+                color: rgb(209, 71, 20);
+            }
+
+            25% {
+                color: rgb(87, 87, 208);
+            }
+
+            50% {
+                color: rgb(208, 29, 29);
+            }
+
+            75% {
+                color: rgb(43, 203, 203);
+            }
+        }
+
+        .navbar-nav {
+            margin-left: auto;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 20px;
+        }
+
+        .body-section {
+            height: 80vh;
+            border: 2px solid rgb(165, 146, 146);
+            overflow: hidden;
+            border-radius: 30px;
+            margin: 5px 15px 5px 15px;
+        }
+
+        .box-left {
+            text-align: center;
+            padding: 30px;
+            font-size: large;
+            font-family: "DM sans", sans-serif;
+        }
+
+        .about-h {
+            text-align: center;
+            font-family: "DM sans", sans-serif;
+            font-size: 50px;
+        }
+
+        .about-p {
+            font-family: montserrat, sans-serif;
+            font-size: large;
+            padding-left: 200px;
+            padding-right: 200px;
+            text-align: center;
+        }
+
+        .card {
+            background: transparent;
+        }
+
+        img {
+            border-radius: 10px;
+        }
+
+        .card {
+            border: 2px solid black;
+            padding: 20px;
+            color: white;
+            transition-duration: 0.3s;
+            size: 100px;
+        }
+
+        .card-p {
+            text-align: center;
+            font-size: 20px;
+            padding: 20px;
+        }
+
+        .card:hover {
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            transform: scale(1.1, 1.1);
+            box-shadow: 0 0 30px #d70e65;
+            background-image: url(https://tse3.mm.bing.net/th?id=OIP.jqQhWOVs8JSsQgxZ2E-6oQHaEK&pid=Api&P=0&h=180);
+        }
+
+        .card-h1 {
+            text-align: center;
+            font-size: 50px;
+            padding: 20px;
+        }
+
+        .contact {
+            text-align: center;
+        }
+
+        .s-h1 {
+            border: 2px solid red;
+            display: inline-block;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 40px;
+        }
+
+        .contact-detail {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 30px;
+            padding-top: 15px;
+        }
+
+        .img-icon {
+            height: 30px;
+        }
+
+        .online-contact {
+            padding: 40px;
+        }
+
+        .ser-bottom {
+            font-size: 15px;
+            text-align: center;
+        }
+
+        .contact-detail:hover {
+            color: rgb(204, 181, 188);
+        }
+
+        .img-icon:hover {
+            color: rgb(221, 85, 35);
+            width: 50px;
+            height: 50px;
+            box-shadow: 0 0 10px #d70e65;
+        }
+
+        .s-h1:hover {
+            border: 5px solid rgb(52, 12, 186);
+            font-size: 50px;
+        }
+
+        .servicer:hover {
+            color: rgb(34, 20, 222);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="body">
+        <marquee width="100%" behavior="alternative" bgcolor="greenyellow" time="2s" color="black">vinod yadav</marquee>
+        <div class="nav-bar">
+            <nav class="navbar navbar-expand-lg bg-transparent">
+                <div class="container-fluid">
+                    <img src="https://res.cloudinary.com/dchmyyur7/image/upload/v1699623077/logo_swygir.png"
+                        class="nav-logo">
+                    <center>
+                        <h1 class="nav-h1">VINOD AMBARAPU</h1>
+                    </center>
+                    <div id="dropdown-item" class="collapse navbar-collapse">
+
+                        <ul class="navbar-right">
+                            <li><a href="portfilo.html">home</a></li>
+                            <li><a href="#course">skills</a></li>
+                            <li><a href="">contact</a></li>
+                            <li><a href="#">services</a></li>
+                            <li><a href="#">features</a></li>
+                        </ul>
+                    </div>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+        <div class="body-section d flex-column justify-content-center">
+            <div class="container">
+                <div class="row">
+                    <div class="box-left col-5">
+                        <h1>vinod<span style="color: greenyellow;"> about</span></h1>
+                        <p> My name is <strong style="color:red;">vinod</strong> i has been studying b.tech in <strong
+                                style="color:red;">annamcharya institute of technology and science</strong>. I have
+                            several
+                            qualification that are an excellent match for this postion. I am diligent ,self-discplined ,
+                            comitted to
+                            lifelong learning
+                            , and i genuinely want to build a succcessful career in tihs industry<br>Outside of work , i
+                            keep myself
+                            fit and active , so my concentration and energy levels are always high. My strengths include
+                            my
+                            flexibility, my fast pace of work which means.I will gety more work done than the average
+                            employee, and
+                            my
+                            adaptability to change.I am the type of person who will be a positive role model for your
+                            company, and i
+                            will support the organization in any changes it wants to make while working hard to repay
+                            the trust you
+                            will have shown in hiring me. </p>
+                        </p>
+                    </div>
+                    <div class="box-right col-7">
+                        <a target="_blank"
+                            src="https://res.cloudinary.com/dchmyyur7/image/upload/v1698076883/IMG_20230701_223413_542-fotor-20231012212238_x980iu.png">
+                            <img class="img-b"
+                                src="https://res.cloudinary.com/dchmyyur7/image/upload/v1698076883/IMG_20230701_223413_542-fotor-20231012212238_x980iu.png"
+                                align="left"></a>
+                        <p class="web" style="font-size: large;">Web development involves the creation and maintenance
+                            of websites
+                            and web applications using various programminglanguages such as Java, Python, and
+                            JavaScript. Developers
+                            use these languages to write the software that powers the functionality and interactivity of
+                            a website,
+                            making it accessible both on desktop and mobile devices. Web development encompasses
+                            everything from
+                            coding and database management to user interface design, ensuring a seamless online
+                            experience for users.
+                            The tutorials below provide tips and tricks on how to get started with web development.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div>
+                            <h1 class="about-h">about<span style="color:rgb(225, 21, 21)"> us</span></h1>
+                        </div>
+                        <p class=" about-p">
+                            masscoders,founded by vinod in 2023.is a visionary community with a mission to empoer and
+                            inspire to youth
+                            to ecplore the world of codding our motto "motivating youth to code",encapsulation our
+                            dedication to
+                            makeing coding accessble and engaing for all,especially in native language such as telugu.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="what we do">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="about-h">what we <span style="color:rgb(225, 21, 21)"> do</span><span>?</span></h1>
+                        <p class=" about-p">
+                            we specialize in providing coding tutorials in native language, starting with telugu ,and
+                            extending our
+                            reach to english .at masscoders, we beliving that learnig to code should be inclusive easy
+                            to undererstand
+                            .regarding of one's lingulstic background.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class=" course" id="section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="about-h">course<span style="color: greenyellow;"> offered</span></h1>
+                    </div>
+                    <div class="col-4">
+                        <div class="card">
+                            <img src="https://tse1.mm.bing.net/th?id=OIP.g0DLAUJcATQhT6opbrTFmQHaEK&pid=Api&P=0&h=180">
+                            <h1 class="card-h1">web development with<span style="color: greenyellow;"> MERN</span></h1>
+                            <P class="card-p">A web developer is a programmer who develops World Wide Web applications
+                                using a
+                                client–server model.
+                                The applications typically use HTML, CSS, and JavaScript in the client, and any
+                                general-purpose
+                                programming language in the server.
+                                HTTP is used for communications between client and server. A web developer may
+                                specialize in client-side
+                                applications (Front-end web development),
+                                server-side applications (back-end development), or both (full-stack development).</P>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card">
+                            <img src="https://tse1.mm.bing.net/th?id=OIP.65xryMl4NqE7st6qLi2k2AHaEK&pid=Api&P=0&h=180">
+                            <h1 class="card-h1">body building<span style="color: greenyellow;"> LEARNER</span></h1>
+                            <P class="card-p">There are many reasons why overtraining occurs, including lack of adequate
+                                nutrition,
+                                lack of recovery time between workouts, insufficient sleep, and training at a high
+                                intensity for too
+                                long (a lack of splitting apart workouts).
+                                Timely provision of carbohydrates, proteins, and various micronutrients such as
+                                vitamins, minerals,
+                                phytochemicals, even nutritional supplements are critical. A mental disorder, informally
+                                called
+                                bigorexia (by analogy with anorexia), may account for overtraining in some individuals.
+                                Sufferers feel as if they are never big enough or muscular enough, which forces them to
+                                overtrain in
+                                order to try to reach their goal physique</P>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card">
+                            <img
+                                src="https://tse1.mm.bing.net/th?id=OIP.LeZBpB7LQTRjZapwD9SpIAHaE8&pid=Api&rs=1&c=1&qlt=95&w=153&h=102">
+                            <h1 class="card-h1">ETHICAL <span style="color: rgb(204, 18, 18);">HACKER</span></h1>
+                            <P class="card-p">Certified Ethical Hacker (CEH) is a qualification given by EC-Council and
+                                obtained by
+                                demonstrating knowledge of assessing the security of computer systems by looking for
+                                vulnerabilities in
+                                target systems, using the same knowledge and tools as a malicious hacker, but in a
+                                lawful and legitimate
+                                manner to assess the security posture of a target system.
+                                The code for the CEH exam is 312–50.
+                                This certification has now been made a baseline with a progression to the CEH
+                                (Practical), launched in
+                                March 2018, a test of penetration testing skills in a lab environment where the
+                                candidate must
+                                demonstrate the ability to apply techniques and use penetration testing tools to
+                                compromise various
+                                simulated systems within a virtual environment.</P>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="contact">
+            <h1 class="s-h1">contact<span style="color:rgb(240, 55, 55)"> info</span></h1>
+            <div class="contact-detail">
+                <p>vinod Ambarapu</p>
+                <p>+91-9573508320</p>
+                <p>ambarapuvinod@gmail.com</p>
+            </div>
+            <div class="online-contact">
+                <a href="https://www.instagram.com/friendss_call_me_mama/">
+                    <img src="https://imagensemoldes.com.br/wp-content/uploads/2020/04/%C3%8Dcone-Instagram-PNG.png"
+                        class="img-icon">
+                </a>
+                <a href="https://youtube.com/@ambarapuvinod1626?si=vDyXp_Y3_7PvxTaR">
+                    <img src="https://1.bp.blogspot.com/-zPnHKpUdViY/X0OzA6pRnXI/AAAAAAAAAQM/LZQbELfm9BQK6nIkju-1t4KqMVxcPkRdQCLcBGAsYHQ/s1912/logo%2Byt%2Byogiancreative1.png"
+                        class="img-icon">
+                </a>
+                <a href="https://wa.me/qr/YM6QJ3KEK2R4F1">
+                    <img src="https://1.bp.blogspot.com/-PM8_Rig8V0M/XxFkv-2f3hI/AAAAAAAACSU/vB1BqbuhFCMyJ8OGCVstFiMLFmavCLqrwCPcBGAYYCw/s1600/whatsapp-logo-1.png"
+                        class="img-icon" alt="image">
+                </a>
+            </div>
+        </div>
+        <div>
+            <p class="ser-bottom"><span style="color: rgb(199, 47, 47);">©2020</span> Alma Lasers | Terms of Use |
+                Privacy
+                Policy
+                UX UI | WEBSITE DEVELOPMENT BY <span class="servicer" style="color: rgb(199, 47, 47);">VINOD
+                    AMBARAPU</span></p>
+        </div>
+    </div>
+    <div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+
+
+        </script>
+</body>
+
+</html>
