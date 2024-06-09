@@ -15,6 +15,13 @@
         crossorigin="anonymous"></script>
     <script>localStorage.getItem("pref-theme") === "dark" && document.body.classList.add("dark")</script>
     <style>
+        .whatsapp {
+            display: grid;
+            grid-template-columns: repeat(mirmax(600px, ft));
+            grid-gap: 10px;
+
+        }
+
         .nav-logo {
             height: 150px;
             filter: drop-shadow(4px 1px 1px red);
@@ -163,6 +170,12 @@
             animation-iteration-count: infinite;
         }
 
+        .navbar-nav {
+            margin-left: auto;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 20px;
+        }
+
         @keyframes vinod {
             box-shadow {
                 color: coral;
@@ -214,11 +227,11 @@
         }
 
         .whatsapp {
-            height: 25px;
-            width: 25px;
-            top: 0;
-            left: 0%;
+            height: 50px;
+            width: 50px;
             z-index: 1;
+            left: 58%;
+            top: 240px;
             position: absolute;
             filter: drop-shadow(4px 4px 4px rgb(249, 245, 245));
 
@@ -251,11 +264,7 @@
             }
         }
 
-        .navbar-nav {
-            margin-left: auto;
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            font-size: 20px;
-        }
+
 
         .body-section {
             height: 80vh;
@@ -354,10 +363,6 @@
             text-align: center;
         }
 
-        .contact-detail:hover {
-            color: rgb(204, 181, 188);
-        }
-
         .img-icon:hover {
             color: rgb(221, 85, 35);
             width: 50px;
@@ -372,15 +377,6 @@
 
         .servicer:hover {
             color: rgb(34, 20, 222);
-        }
-
-        .whatsapp {
-            height: 50px;
-            width: 50px;
-            z-index: 1;
-            left: 75%;
-            top: 240px;
-            position: absolute;
         }
     </style>
 </head>
@@ -586,13 +582,13 @@
                 </a>
             </div>
         </div>
-        <div>
+        <footer>
             <p class="ser-bottom"><span style="color: rgb(199, 47, 47);">©2020</span> Alma Lasers | Terms of Use |
                 Privacy
                 Policy
                 UX UI | WEBSITE DEVELOPMENT BY <span class="servicer" style="color: rgb(199, 47, 47);">VINOD
                     AMBARAPU</span></p>
-        </div>
+        </footer>
     </div>
     <div>
     </div>
