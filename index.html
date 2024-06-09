@@ -194,7 +194,8 @@
             cursor: pointer;
             transition: all 0.3s;
             border-radius: 100%;
-            transform: scale(0.5);
+            margin-top: 30px;
+            transform: scale(1);
         }
 
         svg {
@@ -206,6 +207,26 @@
             border-radius: 100%;
             box-shadow: 0 0 50px, 0 0 50px, 0 0 50px, 0 0 50px, 0 0 50px;
             margin-top: 30px;
+            animation-name: image;
+            animation-duration: 2s;
+            transform: scale(1);
+            animation-iteration-count: infinite;
+        }
+
+        .whatsapp {
+            height: 25px;
+            width: 25px;
+            top: 0;
+            left: 0%;
+            z-index: 1;
+            position: absolute;
+            filter: drop-shadow(4px 4px 4px rgb(249, 245, 245));
+
+        }
+
+        .whatsapp:hover {
+            border-radius: 100%;
+            box-shadow: 0 0 20px, 0 0 20px, 0 0 20px, 0 0 20px, 0 0 20px;
             animation-name: image;
             animation-duration: 2s;
             transform: scale(1) rotate(360deg);
@@ -352,6 +373,15 @@
         .servicer:hover {
             color: rgb(34, 20, 222);
         }
+
+        .whatsapp {
+            height: 50px;
+            width: 50px;
+            z-index: 1;
+            left: 75%;
+            top: 240px;
+            position: absolute;
+        }
     </style>
 </head>
 
@@ -362,10 +392,9 @@
             <nav class="navbar navbar-expand-lg bg-transparent">
                 <div class="container-fluid">
                     <img src="https://res.cloudinary.com/dchmyyur7/image/upload/v1699623077/logo_swygir.png"
-                        class="nav-logo">
-                    <center>
-                        <h1 class="nav-h1">VINOD AMBARAPU</h1>
-                    </center>
+                        class="nav-logo" alt="navbar">
+
+                    <h1 class="nav-h1">VINOD AMBARAPU</h1>
                     <div id="dropdown-item" class="collapse navbar-collapse">
 
                         <ul class="navbar-right">
@@ -414,8 +443,11 @@
                             src="https://res.cloudinary.com/dchmyyur7/image/upload/v1698076883/IMG_20230701_223413_542-fotor-20231012212238_x980iu.png">
                             <img class="img-b"
                                 src="https://res.cloudinary.com/dchmyyur7/image/upload/v1698076883/IMG_20230701_223413_542-fotor-20231012212238_x980iu.png"
-                                align="left"></a>
-                        <p class="web" style="font-size: large;">Web development involves the creation and maintenance
+                                align="left" alt="profile" /></a>
+                        <a href=" tel:+91-9573508320/"> <img alt="react" class="whatsapp"
+                                src="http://www.pngall.com/wp-content/uploads/2016/04/WhatsApp-PNG-Picture.png"></a>
+
+                        <p class="web" style="font-size: larger;">Web development involves the creation and maintenance
                             of websites
                             and web applications using various programminglanguages such as Java, Python, and
                             JavaScript. Developers
@@ -472,7 +504,8 @@
                     </div>
                     <div class="col-4">
                         <div class="card">
-                            <img src="https://tse1.mm.bing.net/th?id=OIP.g0DLAUJcATQhT6opbrTFmQHaEK&pid=Api&P=0&h=180">
+                            <img src="https://tse1.mm.bing.net/th?id=OIP.g0DLAUJcATQhT6opbrTFmQHaEK&pid=Api&P=0&h=180"
+                                alt="pic">
                             <h1 class="card-h1">web development with<span style="color: greenyellow;"> MERN</span></h1>
                             <P class="card-p">A web developer is a programmer who develops World Wide Web applications
                                 using a
@@ -488,7 +521,8 @@
                     </div>
                     <div class="col-4">
                         <div class="card">
-                            <img src="https://tse1.mm.bing.net/th?id=OIP.65xryMl4NqE7st6qLi2k2AHaEK&pid=Api&P=0&h=180">
+                            <img src="https://tse1.mm.bing.net/th?id=OIP.65xryMl4NqE7st6qLi2k2AHaEK&pid=Api&P=0&h=180"
+                                alt="LEARNER">
                             <h1 class="card-h1">body building<span style="color: greenyellow;"> LEARNER</span></h1>
                             <P class="card-p">There are many reasons why overtraining occurs, including lack of adequate
                                 nutrition,
@@ -507,8 +541,8 @@
                     </div>
                     <div class="col-4">
                         <div class="card">
-                            <img
-                                src="https://tse1.mm.bing.net/th?id=OIP.LeZBpB7LQTRjZapwD9SpIAHaE8&pid=Api&rs=1&c=1&qlt=95&w=153&h=102">
+                            <img src="https://tse1.mm.bing.net/th?id=OIP.LeZBpB7LQTRjZapwD9SpIAHaE8&pid=Api&rs=1&c=1&qlt=95&w=153&h=102"
+                                alt="hacker">
                             <h1 class="card-h1">ETHICAL <span style="color: rgb(204, 18, 18);">HACKER</span></h1>
                             <P class="card-p">Certified Ethical Hacker (CEH) is a qualification given by EC-Council and
                                 obtained by
@@ -540,11 +574,11 @@
             <div class="online-contact">
                 <a href="https://www.instagram.com/friendss_call_me_mama/">
                     <img src="https://imagensemoldes.com.br/wp-content/uploads/2020/04/%C3%8Dcone-Instagram-PNG.png"
-                        class="img-icon">
+                        class="img-icon" alt="instagram">
                 </a>
                 <a href="https://youtube.com/@ambarapuvinod1626?si=vDyXp_Y3_7PvxTaR">
                     <img src="https://1.bp.blogspot.com/-zPnHKpUdViY/X0OzA6pRnXI/AAAAAAAAAQM/LZQbELfm9BQK6nIkju-1t4KqMVxcPkRdQCLcBGAsYHQ/s1912/logo%2Byt%2Byogiancreative1.png"
-                        class="img-icon">
+                        class="img-icon" alt="youtube">
                 </a>
                 <a href="https://wa.me/qr/YM6QJ3KEK2R4F1">
                     <img src="https://1.bp.blogspot.com/-PM8_Rig8V0M/XxFkv-2f3hI/AAAAAAAACSU/vB1BqbuhFCMyJ8OGCVstFiMLFmavCLqrwCPcBGAYYCw/s1600/whatsapp-logo-1.png"
